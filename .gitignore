@@ -1,3 +1,4 @@
 #Twit npm
 main/node_modules/*
 main/config.js
+.DS_Store
