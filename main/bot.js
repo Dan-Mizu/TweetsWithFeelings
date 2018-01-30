@@ -2,6 +2,7 @@
 var config = require('./config');
 var Sentencer = require('sentencer');
 var txtgen = require('txtgen');
+var readline = require('readline');
 var Twit = require('twit');
 var T = new Twit(config);
 
@@ -21,6 +22,9 @@ function getRandomInt(min, max) {
 console.log (
     '********** TweetsWithFeelings Bot Init **********\n'
 );
+
+//Starts the Tweet Cycle
+startLoop(60 * 60);
 
 //Loop Function
 function startLoop(loopTime) {
@@ -44,9 +48,6 @@ function startLoop(loopTime) {
     }, 1000);
 }
 
-//Starts the Tweet Cycle
-startLoop(10);
-
 //The Actual Tweeting Part Thing
 function tweetFeelings() {
     tweetContent = txtgen.sentence() + '\n\n--Feeling: ' + Sentencer.make('{{ adjective }} ') + eFeelings[getRandomInt(1, eFeelings.length)];
@@ -59,8 +60,5 @@ function tweetInfo(err, data, response) {
         console.log('\n >Error Tweeting.\n');
     } else {
         console.log('__\n >Successfully Tweeted:\n' + tweetContent + '\n__\n');
-        startTimer();
     }
 }
-
-return tweetContent;
