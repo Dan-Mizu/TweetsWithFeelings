@@ -1,5 +1,23 @@
 #Twit npm
 main/node_modules/*
 main/config.js
+config.js
+
+# Node
+npm-debug.log
+
+# Mac
 .DS_Store
-.DS_Store?
+
+# Windows
+Thumbs.db
+
+# WebStorm
+.idea/
+
+# vi
+*~
+
+# General
+log/
+*.log
