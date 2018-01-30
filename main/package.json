@@ -1,0 +1,17 @@
+{
+  "name": "tweetswithfeelings",
+  "version": "1.0.0",
+  "description": "tweets that have feelings",
+  "main": "bot.js",
+  "scripts": {},
+  "keywords": [
+    "twitter",
+    "bot",
+    "feelings"
+  ],
+  "author": "danann",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "random-sentence": "^1.0.4"
+  }
+}
